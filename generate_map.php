@@ -35,7 +35,9 @@ foreach ($json->features as $serial => $feature) {
     }
 
     if ($showed[$id]) {
-        $json->features[$showed[$id]]->geometry = $merge_feature($json->features[$showed[$id]]->geometry, $feature->geometry);
+        if (array_key_exists($showed[$id], $json->features)) {
+            $json->features[$showed[$id]]->geometry = $merge_feature($json->features[$showed[$id]]->geometry, $feature->geometry);
+        }
         error_log("{$id} is showed");
         unset($json->features[$serial]);
         continue;
