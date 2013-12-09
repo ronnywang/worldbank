@@ -31,10 +31,26 @@ $merge_feature = function($a, $b){
 foreach ($json->features as $serial => $feature) {
     $id = $feature->properties->WB_A3;
     if ($id == 'ROM') {
-        $id = 'ROU';
+        $id = 'ROU'; // Romania
+    }
+    if ($id == 'ZAR') {
+        $id = 'COD'; // Democratic Republic of the Congo
+    }
+    if ($id == 'ADO') {
+        $id = 'AND'; // Andorra
+    }
+    if ($id == 'IMY') {
+        $id = 'IMN'; // Isle of Man
+    }
+    if ($id == 'TMP') {
+        $id = 'TLS'; // Timor-Leste
     }
     if ($id == -99) {
         $id = $feature->properties->ADM0_A3;
+    }
+
+    if ($id == 'PSX') {
+        $id = 'PSE'; // West Bank and Gaza
     }
 
     if ($showed[$id]) {
@@ -55,8 +71,11 @@ foreach ($json->features as $serial => $feature) {
         continue;
     }
 
-    unset($json->features[$serial]);
-    error_log("Map yes, Bank no: " . $id);
+    error_log("Map yes, Bank no: ({$id}) {$json->features[$serial]->properties->NAME_LONG}");
+    $json->features[$serial]->properties = array(
+        'id' => $id,
+        'name' => $json->features[$serial]->properties->NAME_LONG,
+    );
 }
 $json->features = array_values($json->features);
 
