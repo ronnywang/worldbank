@@ -30,6 +30,9 @@ $merge_feature = function($a, $b){
 
 foreach ($json->features as $serial => $feature) {
     $id = $feature->properties->WB_A3;
+    if ($id == 'ROM') {
+        $id = 'ROU';
+    }
     if ($id == -99) {
         $id = $feature->properties->ADM0_A3;
     }
