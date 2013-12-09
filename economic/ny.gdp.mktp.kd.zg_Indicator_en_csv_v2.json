@@ -1,0 +1,93 @@
+{
+  "type": "ColorMap",
+  "map_repo": {"user": "ronnywang", "repository": "worldbank", "path" : "worldbank.json"},
+  "data_repo": {"user": "ronnywang", "repository": "worldbank", "path" : "economic/ny.gdp.mktp.kd.zg_Indicator_en_csv_v2.csv"},
+  "map_columns": ["id"],
+  "data_columns": ["Country Code"],
+  "tabs": {
+     "1961": {
+         "column" : "1961",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "1965": {
+         "column" : "1965",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "1970": {
+         "column" : "1970",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "1975": {
+         "column" : "1975",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "1980": {
+         "column" : "1980",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "1985": {
+         "column" : "1985",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "1990": {
+         "column" : "1990",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "1995": {
+         "column" : "1995",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "2000": {
+         "column" : "2000",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "2005": {
+         "column" : "2005",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "2010": {
+         "column" : "2010",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "2011": {
+         "column" : "2011",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "2012": {
+         "column" : "2012",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     },
+     "2013": {
+         "column" : "2013",
+         "color" : [255,0,0],
+         "min" : -100,
+         "max" : 90
+     }
+  }
+}
