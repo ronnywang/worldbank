@@ -4,7 +4,7 @@
   "data_repo": {"user": "ronnywang", "repository": "worldbank", "path" : "economic/ny.gdp.mktp.kd.zg_Indicator_en_csv_v2.csv"},
   "map_columns": ["id"],
   "data_columns": ["Country Code"],
-  "color_set" : "gdp"
+  "color_set" : {
     "gdp" : [
         [-10, [255, 255, 255]],
         [-5, [0, 255, 255]],
