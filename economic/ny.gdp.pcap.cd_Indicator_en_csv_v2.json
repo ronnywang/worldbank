@@ -1,0 +1,76 @@
+{
+  "type": "ColorMap",
+  "map_repo": {"user": "ronnywang", "repository": "worldbank", "path" : "worldbank.json"},
+  "data_repo": {"user": "ronnywang", "repository": "worldbank", "path" : "economic/ny.gdp.pcap.cd_Indicator_en_csv_v2.csv"},
+  "map_columns": ["id"],
+  "data_columns": ["Country Code"],
+  "color_set" : {
+    "gdp" : [
+        [0, [255, 255, 255]],
+        [1000, [0, 255, 255]],
+        [5000, [0, 0, 255]],
+        [10000, [255, 255, 0]],
+        [20000, [0, 255, 0]],
+        [40000, [255, 0, 0]],
+        [80000, [255, 128, 128]]
+    ]
+  },
+  "tabs": {
+     "1961": {
+         "column" : "1961",
+         "colors" : "gdp"
+     },
+     "1965": {
+         "column" : "1965",
+         "colors" : "gdp"
+     },
+     "1970": {
+         "column" : "1970",
+         "colors" : "gdp"
+     },
+     "1975": {
+         "column" : "1975",
+         "colors" : "gdp"
+     },
+     "1980": {
+         "column" : "1980",
+         "colors" : "gdp"
+     },
+     "1985": {
+         "column" : "1985",
+         "colors" : "gdp"
+     },
+     "1990": {
+         "column" : "1990",
+         "colors" : "gdp"
+     },
+     "1995": {
+         "column" : "1995",
+         "colors" : "gdp"
+     },
+     "2000": {
+         "column" : "2000",
+         "colors" : "gdp"
+     },
+     "2005": {
+         "column" : "2005",
+         "colors" : "gdp"
+     },
+     "2010": {
+         "column" : "2010",
+         "colors" : "gdp"
+     },
+     "2011": {
+         "column" : "2011",
+         "colors" : "gdp"
+     },
+     "2012": {
+         "column" : "2012",
+         "colors" : "gdp"
+     },
+     "2013": {
+         "column" : "2013",
+         "colors" : "gdp"
+     }
+  }
+}
