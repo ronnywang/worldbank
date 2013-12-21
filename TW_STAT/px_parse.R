@@ -47,7 +47,7 @@ cat("infile:", px_path, "\n")
 cat("outfile:", csv_path, "\n")
 
 require(pxR)
-my.px.object <- read.px("PR0105A1A.px", encoding="big5")
+my.px.object <- read.px(px_path, encoding="big5")
 my.px.data   <-  as.data.frame(my.px.object)
 # write.csv(my.px.data, file="raw_px.csv", row.names=FALSE)
 
@@ -57,7 +57,7 @@ colnames(my.px.data) <- c("type", "indicator", "time", "value")
 # Long to Wide
 require(reshape2)
 # output
-df.ind_expanded <- dcast(my.px.data, time ~ type + indicator, mean)
-df.type_expanded <- dcast(my.px.data, time + type ~ indicator, mean)
+df.ind_expanded <- dcast(my.px.data, time ~ indicator + type, mean)
+# df.type_expanded <- dcast(my.px.data, time + type ~ indicator, mean)
 
 write.csv(df.ind_expanded, csv_path, row.names=FALSE)
